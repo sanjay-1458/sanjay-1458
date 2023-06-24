@@ -1,11 +1,10 @@
-<h1 align="center">Hi, guys! <img src="https://github.com/wervlad/wervlad/assets/24524555/766d336d-b87d-44ba-807c-c51de2bc6b4d" width="28px" alt="👋"></h1>
+<h1 align="center">Hi, guys! <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/24524555/238178097-766d336d-b87d-44ba-807c-c51de2bc6b4d.gif" width="28px" alt="👋"></h1>
 
 <p align="center">
     <b>Welcome to my page!</b><br><br>
     <i>
         I'm Sanjay Thakur.<br>
-        A curious learner in data science<br>
-        An enthuastic programmerr<br>
+        A curious learner and an enthuastic programmer<br>
     </i><br>
     <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">
         <img src="https://img.shields.io/badge/LinkedIn-black?style=flat-square&logo=linkedin" alt="LinkedIn">
