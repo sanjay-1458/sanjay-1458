@@ -4,7 +4,7 @@
     <b>Welcome to my page!</b><br><br>
     <i>
         I'm Sanjay Thakur.<br>
-        A curious learner and an enthuastic programmer<br>
+        A curious learner and an enthuastic programmer.<br>
     </i><br>
     <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">
         <img src="https://img.shields.io/badge/LinkedIn-black?style=flat-square&logo=linkedin" alt="LinkedIn">
