@@ -46,7 +46,6 @@
 ## Backend Technologies
 [![Express JS](https://img.shields.io/badge/express_JS-black?style=for-the-badge&logo=express&logoColor=white)](https://github.com/sanjay-1458)
 [![Flask](https://img.shields.io/badge/flask-black?style=for-the-badge&logo=flask)](https://github.com/sanjay-1458)
-[![React](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react)](https://github.com/sanjay-1458)
 
 ## Databases
 [![MySQL](https://img.shields.io/badge/mysql-black?style=for-the-badge&logo=mariadb)](https://github.com/sanjay-1458)
@@ -59,8 +58,6 @@
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=sanjay-1458&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-## ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ## 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=sanjay-1458&limit=5&theme=radical&combine_all_yearly_contributions=true)
