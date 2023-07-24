@@ -53,7 +53,6 @@
 [![MongoDB](https://img.shields.io/badge/mongodb-black?style=for-the-badge&logo=mongodb)](https://github.com/sanjay-1458)
 
 ## 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=sanjay-1458&theme=radical&hide_border=true&include_all_commits=true&count_private=true)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=sanjay-1458&theme=radical&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=sanjay-1458&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
