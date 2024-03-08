@@ -4,7 +4,7 @@
     <b>Welcome to my GitHub page!</b><br><br>
     <i>
        Hi there! I'm Sanjay Thakur, a third-year Computer Science student. I'm currently diving into Machine Learning and Full Stack Web Development. I'm passionate about learning and love coding. I'm on a journey to improve my skills for both personal and career growth. Let's grow together!.<br>
-        Let's connect on <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">LinkedIn</a> and <a href="https://leetcode.com/sanjay1e7/">LeetCode</a>!
+        Let's connect on <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">LinkedIn</a> 
     </i><br>
     <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">
         <img src="https://img.shields.io/badge/LinkedIn-black?style=flat-square&logo=linkedin" alt="LinkedIn">
