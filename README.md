@@ -1,10 +1,10 @@
-<h1 align="center">Hi, guys! <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/24524555/238178097-766d336d-b87d-44ba-807c-c51de2bc6b4d.gif" width="28px" alt="👋"></h1>
+<h1 align="center">Hi, I'm Sanjay Thakur! <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/24524555/238178097-766d336d-b87d-44ba-807c-c51de2bc6b4d.gif" width="28px" alt="👋"></h1>
 
 <p align="center">
-    <b>Welcome to my page!</b><br><br>
+    <b>Welcome to my GitHub page!</b><br><br>
     <i>
-        I'm Sanjay Thakur.<br>
-        A curious learner and an enthuastic programmer.<br>
+        A curious learner and an enthusiastic programmer.<br>
+        Let's connect on <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">LinkedIn</a> and <a href="https://leetcode.com/sanjay1e7/">LeetCode</a>!
     </i><br>
     <a href="https://www.linkedin.com/in/sanjay-thakur-b22b19255/">
         <img src="https://img.shields.io/badge/LinkedIn-black?style=flat-square&logo=linkedin" alt="LinkedIn">
@@ -12,11 +12,7 @@
     <a href="https://leetcode.com/sanjay1e7/">
         <img src="https://img.shields.io/badge/LeetCode-black?style=flat-square&logo=LeetCode" alt="LeetCode">
     </a>
-<!--     <a href="https://codeforces.com/profile/sanjay1e7">
-        <img src="https://img.shields.io/badge/Codeforces-black?style=flat-square&logo=codeforces" alt="Codeforces">
-    </a> -->
 </p>
-
 
 ## Languages
 [![Java](https://img.shields.io/badge/java-black?style=for-the-badge&logo=openjdk)](https://github.com/sanjay-1458)
@@ -25,7 +21,6 @@
 [![C++](https://img.shields.io/badge/c++-black?style=for-the-badge&logo=cplusplus)](https://github.com/sanjay-1458)
 [![C](https://img.shields.io/badge/c-black?style=for-the-badge&logo=c)](https://github.com/sanjay-1458)
 [![SQL](https://img.shields.io/badge/sql-black?style=for-the-badge&logo=mysql)](https://github.com/sanjay-1458)
-
 
 ## Technologies & Frameworks
 [![Django](https://img.shields.io/badge/django-black?style=for-the-badge&logo=django)](https://github.com/sanjay-1458)
@@ -46,10 +41,3 @@
 ## 📊 GitHub Stats:
 ![](https://github-readme-streak-stats.herokuapp.com/?user=sanjay-1458&theme=radical&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=sanjay-1458&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
-
-
-
-
-
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
