@@ -34,7 +34,8 @@
 ## 📟 whoami
 
 ```typescript
-// sanjay.tsinterface Developer {
+// sanjay.ts
+interface Developer {
   name: string;
   location: string;
   role: string;
