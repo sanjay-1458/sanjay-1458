@@ -7,18 +7,25 @@
 </a>
 <br/>
 
+<div align="center">
+
 <a href="https://www.linkedin.com/in/sanjaythakur2108/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <img src="https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge&logo=linkedin&logoColor=22D3EE" />
 </a>
+
 <a href="https://sanjay-thakur.vercel.app/">
-  <img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Portfolio-0F172A?style=for-the-badge&logo=vercel&logoColor=A78BFA" />
 </a>
+
 <a href="https://codeforces.com/profile/_sanjay">
-  <img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" />
+  <img src="https://img.shields.io/badge/Codeforces-0F172A?style=for-the-badge&logo=codeforces&logoColor=38BDF8" />
 </a>
+
 <a href="https://leetcode.com/u/st2147/">
-  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
+  <img src="https://img.shields.io/badge/LeetCode-0F172A?style=for-the-badge&logo=leetcode&logoColor=FBBF24" />
 </a>
+
+</div>
 
 </div>
 
