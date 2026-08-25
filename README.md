@@ -67,6 +67,7 @@ export default sanjay;
 ```
 
 <br/>
+
 ## 🧠 Tech Stack
 
 <div align="center">
@@ -124,12 +125,6 @@ export default sanjay;
 </div>
 <br/>
 
-## 📊 GitHub Analytics
-
-
-<div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=sanjay-1458&theme=react-dark&hide_border=true&area=true&line=22D3EE&point=ffffff" width="100%"/>
-</div>
 
 
 
