@@ -30,41 +30,15 @@
 </div>
 
 <br/>
+## 🚀 Featured Projects
 
-## 📟 whoami
-
-```typescript
-// sanjay.ts
-interface Developer {
-  name: string;
-  location: string;
-  role: string;
-  stack: Record<string, string[]>;
-  aiInterests: string[];
-  funFact: string;
-}
-
-const sanjay: Developer = {
-  name: "Sanjay Thakur",
-  location: "Gurugram, India",
-  role: "Full-Stack Developer · AI Agent Builder",
-  stack: {
-    languages: ["TypeScript", "Python", "JavaScript", "C++", "Java"],
-    ai: ["OpenAI SDK", "LangChain", "RAG", "Pinecone"],
-    backend: ["Node.js", "NestJS", "Express", "FastAPI"],
-    infra: ["MongoDB", "PostgreSQL", "Redis", "Docker"]
-  },
-  aiInterests: [
-    "Autonomous Agent Loops & Runtimes",
-    "Multi-Agent Handoffs & Orchestration",
-    "Deterministic Tool Calling & Schema Validation",
-    "AI Guardrails & State Management"
-  ],
-  funFact: "Obsessed with backend reliability 🚀"
-};
-
-export default sanjay;
-```
+<div align="center">
+  <a href="https://sanjay-1458.github.io/sanjay-1458/">
+    <img src="./docs/preview.png" alt="VS Code-style project explorer with VoloNexus.AI, Job-Finder, and AI-Blog-Application" width="100%" />
+  </a>
+  <br />
+  <sub>🖥️ Click to explore · <a href="https://sanjay-1458.github.io/sanjay-1458/?project=volo">VoloNexus.AI</a> · <a href="https://sanjay-1458.github.io/sanjay-1458/?project=jobs">Job-Finder</a> · <a href="https://sanjay-1458.github.io/sanjay-1458/?project=blog">AI Blog</a></sub>
+</div>
 
 <br/>
 
