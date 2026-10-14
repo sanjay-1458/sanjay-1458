@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destined Snakes</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #11182a;
+      --text: #d9e6ff;
+      --muted: #8ea3c7;
+      --male: #4ade80;
+      --male-dark: #166534;
+      --female: #f472b6;
+      --female-dark: #be185d;
+      --accent: #60a5fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #172344 0%, #0b1020 55%, #060913 100%);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: min(1200px, 100%);
+      background: rgba(17, 24, 42, 0.86);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.45);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0.2px;
+    }
+
+    .title p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .legend {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 0.9rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+    }
+
+    .male-dot { background: var(--male); }
+    .female-dot { background: var(--female); }
+    .heat-dot { background: #1d4ed8; }
+
+    .board {
+      padding: 22px;
+      display: grid;
+      place-items: center;
+    }
+
+    canvas {
+      width: min(100%, 1000px);
+      height: auto;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.22);
+    }
+
+    .footer {
+      padding: 0 22px 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .legend {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="title">
+        <h1>🐍 Destined Snakes</h1>
+        <p>Two souls. One grid. Close enough to feel, never close enough to touch.</p>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <span class="dot male-dot"></span>
+          <span>Male Snake</span>
+        </div>
+        <div class="legend-item">
+          <span class="dot female-dot"></span>
+          <span>Female Snake</span>
+        </div>
+        <div class="legend-item">
+          <span class="dot heat-dot"></span>
+          <span>Fake Heat Map</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="board">
+      <canvas id="canvas" width="1020" height="600"></canvas>
+    </div>
+
+    <div class="footer">
+      Long independent routes • They may come very close, but their paths never collide
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const COLS = 34;
+    const ROWS = 18;
+    const CELL = 28;
+    const GAP = 2;
+    const OFFSET_X = 28;
+    const OFFSET_Y = 28;
+
+    const maleColor = "#4ade80";
+    const maleDark = "#166534";
+    const femaleColor = "#f472b6";
+    const femaleDark = "#be185d";
+
+    // Fake filled heatmap intensity values (0-4)
+    const heat = Array.from({ length: ROWS }, (_, r) =>
+      Array.from({ length: COLS }, (_, c) => {
+        const wave1 = Math.sin(c * 0.45) * 0.8;
+        const wave2 = Math.cos(r * 0.55) * 0.7;
+        const wave3 = Math.sin((c + r) * 0.25) * 0.6;
+        const centerGlow =
+          1.2 -
+          Math.min(
+            1.2,
+            Math.hypot(c - COLS * 0.55, r - ROWS * 0.5) / 14
+          );
+        const raw = wave1 + wave2 + wave3 + centerGlow + Math.random() * 0.25;
+        if (raw < 0.2) return 0;
+        if (raw < 0.7) return 1;
+        if (raw < 1.2) return 2;
+        if (raw < 1.8) return 3;
+        return 4;
+      })
+    );
+
+    function heatColor(level) {
+      switch (level) {
+        case 0: return "#0f172a";
+        case 1: return "#0b3b2e";
+        case 2: return "#0e5b45";
+        case 3: return "#1d8f67";
+        case 4: return "#52d39c";
+        default: return "#0f172a";
+      }
+    }
+
+    // Long routes, close at moments, never the same cell.
+    const malePath = [
+      [2,2],[3,2],[4,2],[5,2],[6,2],[7,2],[8,2],[9,2],
+      [9,3],[9,4],[8,4],[7,4],[6,4],[5,4],[4,4],[3,4],[2,4],
+      [2,5],[2,6],[3,6],[4,6],[5,6],[6,6],[7,6],[8,6],[9,6],[10,6],[11,6],
+      [11,5],[11,4],[12,4],[13,4],[14,4],[15,4],[16,4],
+      [16,5],[16,6],[15,6],[14,6],[13,6],[12,6],
+      [12,7],[12,8],[13,8],[14,8],[15,8],[16,8],[17,8],[18,8],
+      [18,9],[18,10],[17,10],[16,10],[15,10],[14,10],[13,10],
+      [13,11],[13,12],[14,12],[15,12],[16,12],[17,12],[18,12],[19,12],[20,12],
+      [20,11],[20,10],[21,10],[22,10],[23,10],[24,10],[25,10],
+      [25,11],[25,12],[24,12],[23,12],[22,12],
+      [22,13],[22,14],[23,14],[24,14],[25,14],[26,14],[27,14],[28,14],[29,14],[30,14],
+      [30,13],[30,12],[30,11],[30,10],[29,10],[28,10],[27,10],
+      [27,9],[27,8],[28,8],[29,8],[30,8],[31,8]
+    ];
+
+    const femalePath = [
+      [31,2],[30,2],[29,2],[28,2],[27,2],[26,2],[25,2],[24,2],[23,2],
+      [23,3],[23,4],[24,4],[25,4],[26,4],[27,4],[28,4],[29,4],[30,4],[31,4],
+      [31,5],[31,6],[30,6],[29,6],[28,6],[27,6],[26,6],[25,6],[24,6],[23,6],[22,6],
+      [22,7],[22,8],[23,8],[24,8],[25,8],[26,8],
+      [26,9],[26,10],[25,10],[24,10],[23,10],[22,10],[21,10],
+      [21,9],[21,8],[20,8],[19,8],[18,8],[17,8],
+      [17,9],[17,10],[18,10],[19,10],[20,10],
+      [20,11],[20,12],[19,12],[18,12],[17,12],[16,12],[15,12],
+      [15,13],[15,14],[16,14],[17,14],[18,14],[19,14],[20,14],[21,14],[22,14],
+      [22,15],[22,16],[23,16],[24,16],[25,16],[26,16],[27,16],[28,16],[29,16],[30,16],[31,16]
+    ];
+
+    // Ensure no interaction: remove any accidental overlaps
+    const maleSet = new Set(malePath.map(([x,y]) => `${x},${y}`));
+    const safeFemalePath = femalePath.filter(([x,y]) => !maleSet.has(`${x},${y}`));
+
+    const maleSnake = {
+      path: malePath,
+      index: 0,
+      length: 11,
+      color: maleColor,
+      dark: maleDark
+    };
+
+    const femaleSnake = {
+      path: safeFemalePath,
+      index: 0,
+      length: 11,
+      color: femaleColor,
+      dark: femaleDark
+    };
+
+    function getCellRect(col, row) {
+      const x = OFFSET_X + col * CELL;
+      const y = OFFSET_Y + row * CELL;
+      return {
+        x,
+        y,
+        w: CELL - GAP,
+        h: CELL - GAP
+      };
+    }
+
+    function drawRoundedRect(x, y, w, h, r, color) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+
+    function drawGrid() {
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          const { x, y, w, h } = getCellRect(c, r);
+          drawRoundedRect(x, y, w, h, 6, heatColor(heat[r][c]));
+        }
+      }
+    }
+
+    function getSnakeSegments(snake) {
+      const segments = [];
+      for (let i = 0; i < snake.length; i++) {
+        const idx = snake.index - i;
+        if (idx < 0) break;
+        segments.push(snake.path[idx]);
+      }
+      return segments;
+    }
+
+    function drawSnake(snake, isFemale = false) {
+      const segments = getSnakeSegments(snake);
+
+      for (let i = segments.length - 1; i >= 0; i--) {
+        const [col, row] = segments[i];
+        const { x, y, w, h } = getCellRect(col, row);
+
+        const alpha = 0.35 + (i / segments.length) * 0.65;
+        const color = i === 0 ? snake.color : snake.dark;
+
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        drawRoundedRect(x + 2, y + 2, w - 4, h - 4, 9, color);
+        ctx.restore();
+      }
+
+      // Head
+      const [headCol, headRow] = segments[0];
+      const head = getCellRect(headCol, headRow);
+      const cx = head.x + head.w / 2;
+      const cy = head.y + head.h / 2;
+
+      // Eyes
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(cx - 5, cy - 3, 2.2, 0, Math.PI * 2);
+      ctx.arc(cx + 5, cy - 3, 2.2, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#111827";
+      ctx.beginPath();
+      ctx.arc(cx - 5, cy - 3, 1, 0, Math.PI * 2);
+      ctx.arc(cx + 5, cy - 3, 1, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Smile
+      ctx.strokeStyle = "#111827";
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.arc(cx, cy + 1, 5, 0.2, Math.PI - 0.2);
+      ctx.stroke();
+
+      if (isFemale) {
+        // Cute bow tie / bow on top of head
+        ctx.fillStyle = "#ff9bd1";
+
+        ctx.beginPath();
+        ctx.ellipse(cx - 6, cy - 12, 5, 4, 0.3, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.ellipse(cx + 6, cy - 12, 5, 4, -0.3, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#ec4899";
+        ctx.beginPath();
+        ctx.arc(cx, cy - 12, 3.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function drawNearMoments() {
+      const maleSegments = getSnakeSegments(maleSnake);
+      const femaleSegments = getSnakeSegments(femaleSnake);
+
+      if (!maleSegments.length || !femaleSegments.length) return;
+
+      const [mx, my] = maleSegments[0];
+      const [fx, fy] = femaleSegments[0];
+      const dist = Math.hypot(mx - fx, my - fy);
+
+      if (dist <= 2.5 && dist > 0) {
+        const a = getCellRect(mx, my);
+        const b = getCellRect(fx, fy);
+
+        const ax = a.x + a.w / 2;
+        const ay = a.y + a.h / 2;
+        const bx = b.x + b.w / 2;
+        const by = b.y + b.h / 2;
+
+        ctx.save();
+        ctx.strokeStyle = "rgba(255,255,255,0.20)";
+        ctx.lineWidth = 2;
+        ctx.setLineDash([6, 5]);
+        ctx.beginPath();
+        ctx.moveTo(ax, ay);
+        ctx.lineTo(bx, by);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    function drawAura() {
+      const snakes = [
+        { snake: maleSnake, color: "rgba(74, 222, 128, 0.10)" },
+        { snake: femaleSnake, color: "rgba(244, 114, 182, 0.10)" }
+      ];
+
+      for (const item of snakes) {
+        const headPos = item.snake.path[item.snake.index];
+        if (!headPos) continue;
+        const [c, r] = headPos;
+        const rect = getCellRect(c, r);
+        const cx = rect.x + rect.w / 2;
+        const cy = rect.y + rect.h / 2;
+
+        const grad = ctx.createRadialGradient(cx, cy, 2, cx, cy, 30);
+        grad.addColorStop(0, item.color);
+        grad.addColorStop(1, "rgba(0,0,0,0)");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 30, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawGrid();
+      drawAura();
+      drawNearMoments();
+      drawSnake(maleSnake, false);
+      drawSnake(femaleSnake, true);
+    }
+
+    function stepSnake(snake) {
+      snake.index++;
+      if (snake.index >= snake.path.length) {
+        snake.index = 0;
+      }
+    }
+
+    function tick() {
+      stepSnake(maleSnake);
+      stepSnake(femaleSnake);
+      draw();
+    }
+
+    // Start with a few visible segments
+    maleSnake.index = Math.min(10, maleSnake.path.length - 1);
+    femaleSnake.index = Math.min(10, femaleSnake.path.length - 1);
+
+    draw();
+    setInterval(tick, 180);
+  </script>
+</body>
+</html>
