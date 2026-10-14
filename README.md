@@ -3,7 +3,9 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0F172A,100:0891B2&height=220&section=header&text=Hi%20👋%20I'm%20Sanjay&fontSize=48&fontColor=F8FAFC&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20AI%20Agent%20Builder&descAlignY=58&descSize=20&descColor=22D3EE" width="100%"/>
 
 <a href="https://sanjay-thakur.vercel.app/">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=720&lines=Building+autonomous+AI+agents+that+ship;NestJS+%2B+Next.js+%2B+Python+%2B+LLMs;RAG+%7C+Multi-Agent+Systems+%7C+AI+Automation;Full-Stack+Developer+%7C+AI+Agent+Builder" alt="Typing SVG" />
+  
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=720&lines=Full-Stack+Developer+%7C+AI+Agent+Builder;React+%2B+Redux+%7C+Node.js+%2B+Express;Java+%2B+Spring+Boot+%7C+Python+%2B+FastAPI;SQL+%7C+Django+%7C+REST+APIs;Docker+%7C+Kubernetes+%7C+CI%2FCD;Automation+%7C+Testing+%7C+AI+Agents" alt="Typing SVG" />
+
 </a>
 <br/>
 
@@ -30,103 +32,69 @@
 </div>
 
 <br/>
-## 🚀 Featured Projects
+
+## 🚀 Featured Projects (Click & Explore)
+
 
 <div align="center">
   <a href="https://sanjay-1458.github.io/sanjay-1458/">
     <img src="./docs/preview.png" alt="VS Code-style project explorer with VoloNexus.AI, Job-Finder, and AI-Blog-Application" width="100%" />
   </a>
   <br />
-  <sub>🖥️ Click to explore · <a href="https://sanjay-1458.github.io/sanjay-1458/?project=volo">VoloNexus.AI</a> · <a href="https://sanjay-1458.github.io/sanjay-1458/?project=jobs">Job-Finder</a> · <a href="https://sanjay-1458.github.io/sanjay-1458/?project=blog">AI Blog</a></sub>
+ 
 </div>
 
 <br/>
+
 
 ## 🧠 Tech Stack
 
 <div align="center">
 
-<h3>⚡ Languages</h3>
+<b>🌐 Frontend & Languages</b>
 
+<p>
 <img src="https://img.shields.io/badge/TypeScript-0F172A?style=for-the-badge&logo=typescript&logoColor=22D3EE"/>
 <img src="https://img.shields.io/badge/JavaScript-0F172A?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
-<img src="https://img.shields.io/badge/Python-0F172A?style=for-the-badge&logo=python&logoColor=22D3EE"/>
-<img src="https://img.shields.io/badge/Java-0F172A?style=for-the-badge&logo=openjdk&logoColor=F97316"/>
-<img src="https://img.shields.io/badge/C++-0F172A?style=for-the-badge&logo=cplusplus&logoColor=38BDF8"/>
-
-<br/>
-
-<h3>🤖 AI / GenAI</h3>
-
-<img src="https://img.shields.io/badge/OpenAI-0F172A?style=for-the-badge&logo=openai&logoColor=22D3EE"/>
-<img src="https://img.shields.io/badge/Gemini-0F172A?style=for-the-badge&logo=googlegemini&logoColor=8B5CF6"/>
-<img src="https://img.shields.io/badge/LangChain-0F172A?style=for-the-badge&logo=langchain&logoColor=22D3EE"/>
-<img src="https://img.shields.io/badge/Pinecone-0F172A?style=for-the-badge&logo=pinecone&logoColor=67E8F9"/>
-<img src="https://img.shields.io/badge/RAG%20Pipelines-0F172A?style=for-the-badge&logoColor=22D3EE"/>
-<img src="https://img.shields.io/badge/AI%20Agents-0F172A?style=for-the-badge&logoColor=A78BFA"/>
-
-<br/>
-
-<h3>🌐 Frontend</h3>
-
 <img src="https://img.shields.io/badge/React-0F172A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 <img src="https://img.shields.io/badge/Next.js-0F172A?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF"/>
-<img src="https://img.shields.io/badge/Tailwind-0F172A?style=for-the-badge&logo=tailwindcss&logoColor=22D3EE"/>
+<img src="https://img.shields.io/badge/Redux-0F172A?style=for-the-badge&logo=redux&logoColor=A78BFA"/>
+</p>
 
-<br/>
+<b>⚙️ Backend & Databases</b>
 
-<h3>⚙️ Backend & Infrastructure</h3>
-
+<p>
 <img src="https://img.shields.io/badge/Node.js-0F172A?style=for-the-badge&logo=nodedotjs&logoColor=4ADE80"/>
-<img src="https://img.shields.io/badge/NestJS-0F172A?style=for-the-badge&logo=nestjs&logoColor=F43F5E"/>
 <img src="https://img.shields.io/badge/Express-0F172A?style=for-the-badge&logo=express&logoColor=FFFFFF"/>
+<img src="https://img.shields.io/badge/Java-0F172A?style=for-the-badge&logo=openjdk&logoColor=F97316"/>
+<img src="https://img.shields.io/badge/Spring_Boot-0F172A?style=for-the-badge&logo=springboot&logoColor=6DB33F"/>
+<img src="https://img.shields.io/badge/Python-0F172A?style=for-the-badge&logo=python&logoColor=38BDF8"/>
+<img src="https://img.shields.io/badge/FastAPI-0F172A?style=for-the-badge&logo=fastapi&logoColor=00C7A9"/>
+<img src="https://img.shields.io/badge/Django-0F172A?style=for-the-badge&logo=django&logoColor=44B78B"/>
 <img src="https://img.shields.io/badge/MongoDB-0F172A?style=for-the-badge&logo=mongodb&logoColor=4ADE80"/>
+<img src="https://img.shields.io/badge/SQL-0F172A?style=for-the-badge&logo=postgresql&logoColor=38BDF8"/>
 <img src="https://img.shields.io/badge/Redis-0F172A?style=for-the-badge&logo=redis&logoColor=F87171"/>
+</p>
+
+<b>🤖 AI & DevOps</b>
+
+<p>
+<img src="https://img.shields.io/badge/LangChain-0F172A?style=for-the-badge&logo=langchain&logoColor=22D3EE"/>
+<img src="https://img.shields.io/badge/AI_Agents-0F172A?style=for-the-badge&logoColor=A78BFA"/>
 <img src="https://img.shields.io/badge/Docker-0F172A?style=for-the-badge&logo=docker&logoColor=38BDF8"/>
-<img src="https://img.shields.io/badge/Vercel-0F172A?style=for-the-badge&logo=vercel&logoColor=FFFFFF"/>
-<img src="https://img.shields.io/badge/Stripe-0F172A?style=for-the-badge&logo=stripe&logoColor=A78BFA"/>
-
-<br/>
-
-<h3>🛠️ Engineering Tools</h3>
-
-<img src="https://img.shields.io/badge/Git-0F172A?style=for-the-badge&logo=git&logoColor=F97316"/>
-<img src="https://img.shields.io/badge/GitHub%20Actions-0F172A?style=for-the-badge&logo=githubactions&logoColor=22D3EE"/>
+<img src="https://img.shields.io/badge/Kubernetes-0F172A?style=for-the-badge&logo=kubernetes&logoColor=326CE5"/>
+<img src="https://img.shields.io/badge/AWS-0F172A?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900"/>
 <img src="https://img.shields.io/badge/Jenkins-0F172A?style=for-the-badge&logo=jenkins&logoColor=F97316"/>
-<img src="https://img.shields.io/badge/Postman-0F172A?style=for-the-badge&logo=postman&logoColor=FB7185"/>
-<img src="https://img.shields.io/badge/VS%20Code-0F172A?style=for-the-badge&logo=visualstudiocode&logoColor=38BDF8"/>
-
-</div>
-<br/>
-
-
-
-
-<br/>
-
-## 🚀 Featured AI Projects
-
-<div align="center">
-
-| | Project | What it does | Stack | Status |
-|:---:|---|---|---|:---:|
-| 🗓️ | **[VoloNexus.AI](https://github.com/sanjay-1458/VoloNexus.AI)** | Autonomous scheduling system:  AI agents read emails, detect meeting intent, resolve calendar conflicts, and sync events across multiple Google accounts in real time. | `NestJS` `Next.js 14` `MongoDB` `Pinecone` `Redis` `Gemini API` `Stripe` | 🟢 [Live](https://volo-nexus-ai.vercel.app/) |
-| 🔍 | **[Job-Finder](https://github.com/sanjay-1458/Job-Finder)** | Scalable pipeline that crawls listings from Greenhouse, Lever & Workday, normalizes the data, and uses LLM-based filtering to surface only relevant roles. | `Python` `LLM Filtering` `Data Pipelines` | ✅ Complete |
-| ✍️ | **[AI-Blog-Application](https://github.com/sanjay-1458/AI-Blog-Application)** | Generative-AI blogging platform built on the MERN stack, powered by the Google Gemini API for content generation. | `React` `Node.js` `MongoDB` `Gemini API` | ✅ Complete |
+<img src="https://img.shields.io/badge/Git-0F172A?style=for-the-badge&logo=git&logoColor=F97316"/>
+</p>
 
 </div>
 
-<details>
-<summary>📁 Other notable repos</summary>
+
+
 <br/>
 
-| Project | Description | Stack |
-|---|---|---|
-| [Movie-Ticket-Booking](https://github.com/sanjay-1458/Movie-Ticket-Booking) | Full booking app with seat selection, admin show management & earnings tracking | `TypeScript` |
-| [System-Design](https://github.com/sanjay-1458/System-Design) | Collection of system design patterns & OOD problem solutions | `C++` |
 
-
-</details>
 
 <br/>
 
